@@ -18,11 +18,17 @@ public class StudentDAOImpl implements StudentDAO{
         this.entityManager = entityManager;
     }
 
-    // implement save method
+    // implement save method (for Create Object)
     @Override
     @Transactional
     public void save(Student theStudent) {
         // save the student to database
         entityManager.persist(theStudent);
+    }
+
+    // implement findById method (for Read Object)
+    @Override
+    public Student findById(Integer id) {
+        return entityManager.find(Student.class, id);
     }
 }
