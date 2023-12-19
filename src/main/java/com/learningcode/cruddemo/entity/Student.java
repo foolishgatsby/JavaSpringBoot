@@ -23,7 +23,6 @@ public class Student {
     private String email;
 
     // define constructors
-
     // no arguments constructor
     public Student(){
 
@@ -69,7 +68,6 @@ public class Student {
     }
 
     // define toString() method
-
     @Override
     public String toString() {
         return "Student{" +
